@@ -1,0 +1,39 @@
+%matplotlib inline
+
+country.get_group()
+
+gDat[gDat['country']].describe()
+
+
+gDat.plot(x='year',y='lifeExp',kind='scatter')
+
+import sys
+import numpy as np
+def main():
+    script = sys.argv[0]
+    filename = sys.argv[1]
+    data = np.loadtxt(filename, delimiter=',')
+    for m in data.mean(axis=1):
+        print m
+
+Solution to pandas exercise:
+def compare_lifeExp(country1,country2):
+    for c in [country1,country2]:
+        gDat[gDat['country']==c].plot(x='year',y='lifeExp')
+    plt.legend((country1,country2))
+
+
+import sys
+import numpy as np
+def main():
+    script = sys.argv[0]
+    filename = sys.argv[1]
+        add1 = input("Add this: ")
+        add2 = inpimporut("to this: ")
+        print add1, "+", add2, "=", add1 + add2
+        sub2 = input("Subtract this: ")
+        sub1 = input("from this: ")
+        print sub1, "-", sub2, "=", sub1 - sub2
+
+
+198519851985
